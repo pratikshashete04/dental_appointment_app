@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Clinic - Appointment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F0F4F8;
+        }
+        header {
+            background-color: #1C3B57;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .hero {
+            background-color: #5AB7D8;
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        .services {
+            margin: 2rem 0;
+            text-align: center;
+        }
+        form {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333333;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #1C3B57;
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #1C3B57;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Shree Padmavati Dental Clinic</h1>
+</header>
+
+<div class="container">
+    <section class="hero">
+        <!-- <h2>Shree Padmavati Dental Clinic</h2> -->
+        <h2>Schedule your appointment today!</h2>
+        <p>Dr.Pratik Pramod Shete.[BDS]</p>
+        <p>Dr.Nikita Pratik Shete.[BDS]</p>
+        <p>Adress:Near Shatayushi Medical & General stores, Latur road, Tuljapur</p>
+    </section>
+
+    <section class="services">
+        <h2>Our Services</h2>
+        <p>Teeth Cleaning, Root Canals, Implant, Consultations, and more.</p>
+    </section>
+
+    <section class="appointment-form">
+        <h2>Book Your Appointment</h2>
+        <form action="submit_appointment.php" method="post">
+            <label for="name">Patient Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="date">Preferred Appointment Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="service">Service Needed:</label>
+            <select id="service" name="service" required>
+                <option value="cleaning">Teeth Cleaning</option>
+                <option value="consultation">Consultation</option>
+                <option value="implant">Implant</option>
+                <option value="root_canal">Root Canal</option>
+            </select>
+
+            <label for="comments">Comments/Additional Information:</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</div>
+
+<footer>
+    <p>© 2024 Dental Clinic. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
